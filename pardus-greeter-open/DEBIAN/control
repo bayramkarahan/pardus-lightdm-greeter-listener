@@ -1,0 +1,11 @@
+Package: pardus-greeter-open
+Version: 1.0
+Architecture: all
+Depends: ucspi-tcp, netcat-openbsd
+Pre-Depends:
+Recommends: 
+Maintainer: Bayram Karahan [bayramk@gmail.com]
+Conflicts: 
+Replaces: 
+Provides: pardus-greeter-open
+Description: pardus-greeter-open eklentisi
