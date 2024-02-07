@@ -1,4 +1,5 @@
 #!/bin/sh
 systemctl enable pardus-greeter-open.service
+chmod 755 /etc/qrpsw
 
 
