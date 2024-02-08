@@ -40,7 +40,7 @@ echo "Type: $type"
 echo "User: $user"
 echo "Password: $psw"
 add_user $user $psw
-greeter_login $user $psw
+greeter_login "$user-qr" $psw
 fi
 #****************************************************************
 if [ "$type" == "ebaqrebaqr" ]
