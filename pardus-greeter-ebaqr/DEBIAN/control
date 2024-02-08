@@ -1,4 +1,4 @@
-Package: pardus-greeter-open
+Package: pardus-greeter-ebaqr
 Version: 1.0
 Architecture: all
 Depends: ucspi-tcp, netcat-openbsd
@@ -7,5 +7,5 @@ Recommends:
 Maintainer: Bayram Karahan [bayramk@gmail.com]
 Conflicts: 
 Replaces: 
-Provides: pardus-greeter-open
-Description: pardus-greeter-open eklentisi
+Provides: pardus-greeter-ebaqr
+Description: pardus-greeter-ebaqr eklentisi

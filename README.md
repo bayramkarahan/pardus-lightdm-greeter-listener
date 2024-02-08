@@ -1,1 +1,1 @@
-# pardus-greeter-open
+# pardus-greeter-ebaqr
