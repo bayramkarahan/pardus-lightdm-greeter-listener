@@ -1,1 +1,1 @@
-# pardus-greeter-ebaqr
+# pardus-lightdm-greeter-listener
