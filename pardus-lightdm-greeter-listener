@@ -4,8 +4,6 @@ add_user()
 user="$1"
 defpass="$user"
 pass="$2"
-        #if os.path.exists("/etc/qrpsw"):
-        #    psw=open("/etc/qrpsw","r").read().strip()
 if [ ! -d /home/$user ] ; then
             useradd -m $user -s /bin/bash -p $(openssl passwd "$defpass") -U -d /home/$user
             useradd $user-qr -s /bin/bash -p $(openssl passwd "$pass") -d /home/$user
