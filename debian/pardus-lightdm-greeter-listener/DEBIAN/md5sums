@@ -1,0 +1,4 @@
+6e89ac729becd8cdad424ea3bbfdfbd7  lib/systemd/system/pardus-lightdm-greeter-listener.service
+854bcec446a50b5a257ca8eb03cc8eaa  usr/bin/pardus-lightdm-greeter-listener
+4a4dd3598707603b3f76a2378a4504aa  usr/share/doc/pardus-lightdm-greeter-listener/changelog.gz
+312026275b56391e905ef1c7f9398268  usr/share/doc/pardus-lightdm-greeter-listener/copyright

@@ -86,21 +86,6 @@ echo "kurumkod: $kurumkod"
 #echo "Password: $psw"
 echo "$kurumkod">/etc/qrkilit.conf
 fi
-
-**************************************************************
-if [ "$type" == "qrkilitupdate" ]
-then
-version=$(echo $MESSAGE|cut -d":" -f2)
-#psw=$(echo $MESSAGE|cut -d":" -f3)
-
-echo "Type: $type"
-echo "version: $version"
-#echo "Password: $psw"
-apt update
-wget https://github.com/bayramkarahan/pardus-lightdm-greeter-qrkilit/releases/download/current/pardus-lightdm-greeter-qrkilit_${version}_all.deb -O /tmp/qrkilit.deb
-apt install /tmp/qrkilit.deb -y
-fi
-
 #$MESSAGE &
 #sleep 4 
 #$MESSAGE&
