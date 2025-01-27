@@ -20,7 +20,8 @@ if [ ! -d /home/$user ] ; then
 #****************************************************************
 greeter_login()
 {
-/usr/bin/sshlogin $1 $2 &
+temppswd="0000"
+/usr/bin/sshlogin $1 $temppswd &
 sleep 4
 /usr/bin/sshlogin $1 $2 &
 }   
@@ -87,7 +88,7 @@ echo "kurumkod: $kurumkod"
 echo "$kurumkod">/etc/qrkilit.conf
 fi
 
-**************************************************************
+#**************************************************************
 if [ "$type" == "qrkilitupdate" ]
 then
 version=$(echo $MESSAGE|cut -d":" -f2)
