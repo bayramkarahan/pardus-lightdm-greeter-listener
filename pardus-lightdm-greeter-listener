@@ -20,9 +20,6 @@ if [ ! -d /home/$user ] ; then
 #****************************************************************
 greeter_login()
 {
-temppswd="0000"
-/usr/bin/sshlogin $1 $temppswd &
-sleep 4
 /usr/bin/sshlogin $1 $2 &
 }   
 read MESSAGE
