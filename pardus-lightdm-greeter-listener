@@ -23,8 +23,8 @@ greeter_login()
 /usr/bin/sshlogin $1 $2 &
 }   
 read MESSAGE
-echo "PID: $$"
-echo "$MESSAGE"
+#echo "PID: $$"
+#echo "$MESSAGE"
 type=$(echo $MESSAGE|cut -d":" -f1)
 #****************************************************************
 if [ "$type" == "ebaqronline" ]
@@ -32,9 +32,9 @@ then
 user=$(echo $MESSAGE|cut -d":" -f2)
 psw=$(echo $MESSAGE|cut -d":" -f3)
 
-echo "Type: $type"
-echo "User: $user"
-echo "Password: $psw"
+#echo "Type: $type"
+#echo "User: $user"
+#echo "Password: $psw"
 add_user $user $psw
 greeter_login "$user-qr" $psw
 fi
@@ -45,9 +45,9 @@ user=$(echo $MESSAGE|cut -d":" -f2)
 #psw=$(echo $MESSAGE|cut -d":" -f3)
 psw=$(cat /etc/qrpsw)
 user="ebaqr"
-echo "Type: $type"
-echo "User: $user"
-echo "Password: $psw"
+#echo "Type: $type"
+#echo "User: $user"
+#echo "Password: $psw"
 greeter_login $user $psw
 fi
 #****************************************************************
@@ -56,9 +56,9 @@ then
 user=$(echo $MESSAGE|cut -d":" -f2)
 psw=$(echo $MESSAGE|cut -d":" -f3)
 
-echo "Type: $type"
-echo "User: $user"
-echo "Password: $psw"
+#echo "Type: $type"
+#echo "User: $user"
+#echo "Password: $psw"
 greeter_login $user $psw
 fi
 
@@ -68,9 +68,9 @@ then
 user=$(echo $MESSAGE|cut -d":" -f2)
 psw=$(echo $MESSAGE|cut -d":" -f3)
 
-echo "Type: $type"
-echo "User: $user"
-echo "Password: $psw"
+#echo "Type: $type"
+#echo "User: $user"
+#echo "Password: $psw"
 greeter_login $user $psw
 fi
 #**************************************************************
@@ -79,9 +79,8 @@ then
 kurumkod=$(echo $MESSAGE|cut -d":" -f2)
 #psw=$(echo $MESSAGE|cut -d":" -f3)
 
-echo "Type: $type"
-echo "kurumkod: $kurumkod"
-#echo "Password: $psw"
+#echo "Type: $type"
+#echo "kurumkod: $kurumkod"
 echo "$kurumkod">/etc/qrkilit.conf
 fi
 
@@ -91,9 +90,8 @@ then
 version=$(echo $MESSAGE|cut -d":" -f2)
 #psw=$(echo $MESSAGE|cut -d":" -f3)
 
-echo "Type: $type"
-echo "version: $version"
-#echo "Password: $psw"
+#echo "Type: $type"
+#echo "version: $version"
 apt update
 wget https://github.com/bayramkarahan/pardus-lightdm-greeter-qrkilit/releases/download/current/pardus-lightdm-greeter-qrkilit_${version}_all.deb -O /tmp/qrkilit.deb
 apt install /tmp/qrkilit.deb -y
