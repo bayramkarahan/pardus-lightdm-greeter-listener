@@ -1,5 +1,5 @@
 #!/bin/sh
-systemctl enable pardus-lightdm-greeter-listener.service
-chmod 755 /etc/qrpsw
+systemctl enable pardus-lightdm-greeter-listener.service||true
+chmod 755 /etc/qrpsw||true
 
 

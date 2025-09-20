@@ -1,5 +1,5 @@
 #!/bin/sh
 
-systemctl stop pardus-lightdm-greeter-listener.service
+systemctl stop pardus-lightdm-greeter-listener.service||true
 
 
